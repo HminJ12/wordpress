@@ -1,0 +1,56 @@
+.sub-visual {
+  height: 30vh;
+  background: #000;
+}
+
+.snb {
+  height: 50px;
+  background: var(--dark);
+}
+.snb > div {
+  width: min(95%, 1200px);
+  height: inherit;
+  margin: 0 auto;
+}
+.snb > div > ul {
+  height: inherit;
+}
+.snb > div > ul > li {
+  display: none;
+  height: inherit;
+}
+.snb > div > ul > li.current-menu-parent {
+  display: block;
+}
+.snb > div > ul > li > a {
+  display: none;
+}
+.snb > div > ul > li > ul {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+}
+.snb > div > ul > li > ul > li {
+  flex: 1;
+  max-width: 200px;
+  height: inherit;
+  border-right: 1px solid rgba(255, 255, 255, 0.8);
+}
+.snb > div > ul > li > ul > li:last-child {
+  border: none;
+}
+.snb > div > ul > li > ul > li > a {
+  display: block;
+  height: inherit;
+  padding: 0 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  line-height: 50px;
+  background: var(--blue);
+  color: #FFF;
+}
+.snb > div > ul > li > ul > li > a[aria-current] {
+  background: var(--orange);
+}/*# sourceMappingURL=sub.css.map */

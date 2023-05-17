@@ -1,0 +1,56 @@
+@use './mixin' as m;
+
+.sub-visual{
+  height: 30vh; //화면 높이에 따라서 달라진다
+  background: #000;
+}
+
+.snb{
+  height: 50px;
+  background: var(--dark);
+  >div{
+    width: min(95%, 1200px);
+    height: inherit;
+    margin: 0 auto;
+    >ul{
+      height: inherit;
+      >li{
+        display: none;
+        height: inherit;
+        &.current-menu-parent{
+          display: block;
+        }
+        >a{
+          display: none;
+        }
+        >ul{
+          height: inherit;
+          display: flex;
+          justify-content: center;
+          >li{
+            flex: 1;
+            max-width: 200px;
+            height: inherit;
+            border-right: 1px solid rgba(#FFF,0.8);
+            &:last-child{
+              border: none;
+            }
+            >a{
+              display: block;
+              height: inherit;
+              padding: 0 15px;
+              @include m.ellipse;
+              text-align: center;
+              line-height: 50px;
+              background: var(--blue);
+              color: #FFF;
+              &[aria-current]{
+                background: var(--orange);
+              } //a.active
+            }
+          }
+        }
+      }
+    }
+  }
+}

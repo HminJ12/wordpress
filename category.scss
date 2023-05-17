@@ -1,0 +1,130 @@
+@use "./mixin" as m;
+
+ul.page-numbers {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 10px;
+  border-top: 1px dotted #ccc;
+  li {
+    margin: 0 5px;
+    a:hover {
+      color: var(--blue);
+    }
+    span {
+      color: var(--orange);
+      font-weight: 600;
+    }
+  }
+}
+
+.category-gallery-section {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      padding: 5px;
+      box-sizing: border-box;
+      a {
+        display: block;
+        padding: 5px;
+        background: #eee;
+        border: 1px solid #ccc;
+        figure {
+          overflow: hidden;
+          margin: 0;
+          img {
+            width: 100%;
+            height: auto;
+            transform: scale(1.1);
+            transition: all 0.3s;
+          } //img
+          figcaption {
+            position: relative;
+            padding: 10px;
+            background: var(--dark);
+            transition: all 0.3s;
+            h3 {
+              color: #fff;
+              font-weight: 600;
+              padding-bottom: 5px;
+              margin-bottom: 5px;
+              border-bottom: 1px dotted rgba(#fff, 0.3);
+            }
+            p {
+              color: rgba(#fff, 0.8);
+            }
+          } //figcaption
+        } //figure
+        &:hover {
+          figure {
+            img {
+              transform: scale(1.2);
+              transition: all 5s;
+              filter: url(#filter);
+            }
+            figcaption {
+              background: var(--blue);
+            }
+          } //figure
+        } //a:hover
+      } //a
+      @media #{m.$minLg} {
+        width: 33.33%;
+      } //lg
+      @media #{m.$md} {
+        width: 50%;
+      } //md
+      @media #{m.$maxSm} {
+        width: 100%;
+      } //sm
+    } //li
+  } //ul
+} //category-gallery-section
+
+.category-webzin-section {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      box-sizing: border-box;
+      padding: 10px;
+      figure{
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      .textbox{
+        h3{
+
+        }
+        p{
+
+        }
+        a{
+
+        }
+      }
+      @media #{m.$minLg} {
+        display: flex;
+        align-items: center;
+        width: 100%; 
+        border-bottom: 1px solid #CCC;
+        figure{
+          width: 40%;
+          margin-right: 30px;
+        }
+        .textbox{
+          flex: 1;
+        }
+      } //lg
+      @media #{m.$md} {
+        width: 50%;
+      } //md
+      @media #{m.$maxSm} {
+        width: 100%;
+      } //sm
+    } //li
+  } //ul
+} //section
