@@ -688,7 +688,7 @@ scss와 js도 만들어준다.
 캐러젤 플러그인 css, js 복사로 가져오고 호출하기(header에서)
 
 
-
+home.scss에서 .bg에 overflow hidden을 주는 이유는 background-image로 넣은 그림이 크기가 커서 숨겨준다. (좌우로 스크롤바가 생기지 않도록 하기 위해)
 
 
 
